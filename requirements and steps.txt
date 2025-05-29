@@ -1,0 +1,17 @@
+steps:
+1. Creted the public github repository as "Restful-booker"
+
+2. Framework creation
+    1. Created the python project in pycharm
+    2.created the directory [Resources,Tests,utils,output]
+3.Requirements
+    Install the robotframework-requests
+4. run tests
+    robot [file path]
+    command--> robot Tests
+    or
+    robot .\Tests\booking_test.robot
+ 5. Reports
+    created the output directory to store results
+    By default robot framework will provide the html report
+    --D:\python_robot_NTTDATA_framework\report.html
