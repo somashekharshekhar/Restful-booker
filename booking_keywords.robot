@@ -32,6 +32,15 @@ Update Booking
     ${response}=    PUT On Session    ${SESSION}    /booking/${booking_id}    headers=${headers}    json=${payload}
     [Return]    ${response}
 
+Delete Booking
+    [Arguments]    ${booking_id}
+    ${token_response}=    Create Auth Token
+    ${token}=    Set Variable    ${token_response['token']}
+    ${headers}=    Create Dictionary    Cookie=token=${token}
+    ${response}=    DELETE On Session    ${SESSION}    /booking/${booking_id}    headers=${headers}
+    [Return]    ${response}
+
+
 Create Auth Token
     ${data}=    Create Dictionary    username=admin    password=password123
     ${response}=    POST On Session    ${SESSION}    /auth    json=${data}
